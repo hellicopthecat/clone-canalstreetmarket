@@ -1,0 +1,33 @@
+{
+  "name": "clone-canalstreetmarket",
+  "version": "1.0.0",
+  "description": "Clone Canalstreet.market",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "type": "module",
+  "author": "Hellicat",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/register": "^7.22.15",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "pug": "^3.0.2",
+    "sass": "^1.69.3"
+  }
+}
