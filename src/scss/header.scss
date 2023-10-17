@@ -1,0 +1,59 @@
+@import "_variables";
+header {
+  position: relative;
+  .header__head {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    .header {
+      width: 80%;
+      padding-left: 50px;
+      h1 {
+        font-size: 30px;
+      }
+    }
+    .user {
+      width: 20%;
+      ul {
+        display: flex;
+        li {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 80;
+    width: 100%;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+      li {
+        height: 100%;
+        cursor: pointer;
+        writing-mode: vertical-rl;
+      }
+      li:nth-child(1) {
+        width: 100%;
+        background-color: $white;
+      }
+      li:nth-child(2) {
+        width: 5%;
+        background-color: $blue;
+      }
+      li:nth-child(3) {
+        width: 5%;
+        background-color: $red;
+      }
+      li:nth-child(4) {
+        width: 5%;
+        background-color: $orange;
+      }
+    }
+  }
+}

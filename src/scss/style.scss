@@ -1,57 +1,20 @@
 @import "_reset";
 @import "_variables";
+
+@import "header";
+@import "introduce";
+
+* {
+  box-sizing: border-box;
+}
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
 }
-
-header {
-  display: flex;
-  align-items: center;
-  height: 120px;
-  .header {
-    width: 80%;
-    padding-left: 50px;
-    h1 {
-      font-size: 30px;
-    }
+main {
+  .wrapper {
+    position: relative;
+    display: flex;
   }
-  .user {
-    width: 20%;
-    ul {
-      display: flex;
-      li {
-        font-size: 14px;
-        margin-right: 10px;
-      }
-    }
-  }
-}
-
-.wrapper {
-  display: flex;
-  & > * {
-    width: 25vw;
-    height: 100vh;
-  }
-  .introduce {
-  }
-  .food {
-    background-color: $blue;
-  }
-  .retail {
-    background-color: $red;
-  }
-  .community {
-    background-color: $orange;
-  }
-}
-
-#footer {
-  height: 150px;
-  background-color: darkgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

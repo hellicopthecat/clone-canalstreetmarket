@@ -19,7 +19,7 @@ const routes = {
     watch: "src/scss/**/*.scss",
     dest: "build/style",
   },
-  js: {src: "", watch: "", dest: ""},
+  js: {src: "src/js/*.js", watch: "src/js/**/*.js", dest: "build/js"},
 };
 
 const pug = () =>
@@ -37,6 +37,8 @@ const style = () =>
     .pipe(minify())
     .pipe(gulp.dest(routes.style.dest));
 
+const js = () => gulp.src(routes.js.src).pipe(gulp.dest(routes.js.dest));
+
 const ws = () =>
   gulp.src("build").pipe(webserver({livereload: true, open: true}));
 
@@ -45,9 +47,11 @@ const clean = async () => await deleteAsync(["build/"]);
 const watch = () => {
   gulp.watch(routes.pug.watch, pug);
   gulp.watch(routes.style.watch, style);
+  gulp.watch(routes.js.watch, js);
 };
 
-const assets = gulp.series([pug, style]);
+const assets = gulp.series([pug, style, js]);
 const postDev = gulp.parallel([ws, watch]);
 
-export const dev = gulp.series([clean, assets, postDev]);
+export const build = gulp.series([clean, assets]);
+export const dev = gulp.series([build, postDev]);
