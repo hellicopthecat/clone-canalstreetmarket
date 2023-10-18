@@ -6,6 +6,7 @@ import gulpSass from "gulp-sass";
 import autoPrefixer from "gulp-autoprefixer";
 import minify from "gulp-csso";
 import webserver from "gulp-webserver";
+import ghPages from "gh-pages";
 const sass = gulpSass(sass2);
 
 const routes = {
@@ -50,8 +51,15 @@ const watch = () => {
   gulp.watch(routes.js.watch, js);
 };
 
+const ghDeploy = () =>
+  ghPages.publish("build", {
+    branch: "gh-pages",
+    message: "Auto Deploy",
+  });
+
 const assets = gulp.series([pug, style, js]);
 const postDev = gulp.parallel([ws, watch]);
 
 export const build = gulp.series([clean, assets]);
 export const dev = gulp.series([build, postDev]);
+export const deploy = gulp.series([build, ghDeploy]);

@@ -27,6 +27,7 @@
     "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "pug": "^3.0.2",
     "sass": "^1.69.3"
   }
