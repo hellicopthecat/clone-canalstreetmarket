@@ -3,12 +3,13 @@
 
 @import "header";
 @import "introduce";
-
+@import "food";
+@import "retail";
 * {
   box-sizing: border-box;
 }
 body {
-  width: 100%;
+  width: 100vw;
   min-height: 100%;
   overflow-x: hidden;
 }
@@ -17,4 +18,13 @@ main {
     position: relative;
     display: flex;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.body__active {
+  transition: ease-in-out 1s;
+  transform: translateX(0);
 }

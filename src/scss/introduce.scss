@@ -1,14 +1,18 @@
 @import "_variables";
 
 .introduce_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  margin-left: 90px;
   .introduce {
-    background-color: $white;
     width: 85%;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
+    img {
+      width: 85%;
+    }
     .intro__head--text {
       padding: 180px 0 180px 130px;
       width: 55%;

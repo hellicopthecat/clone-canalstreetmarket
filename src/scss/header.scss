@@ -1,9 +1,11 @@
 @import "_variables";
 header {
-  position: relative;
   .header__head {
+    position: relative;
+    z-index: 99;
     display: flex;
     align-items: center;
+    background-color: white;
     height: 120px;
     .header {
       width: 80%;
@@ -28,32 +30,44 @@ header {
     top: 0;
     right: 0;
     z-index: 80;
-    width: 100%;
+    width: 100vw;
     ul {
+      position: absolute;
+      width: 100vw;
       display: flex;
       justify-content: flex-end;
-      align-items: stretch;
       li {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95px;
         height: 100%;
         cursor: pointer;
         writing-mode: vertical-rl;
       }
       li:nth-child(1) {
-        width: 100%;
+        transform: translateX(-79.5vw);
         background-color: $white;
       }
       li:nth-child(2) {
-        width: 5%;
         background-color: $blue;
       }
       li:nth-child(3) {
-        width: 5%;
         background-color: $red;
       }
       li:nth-child(4) {
-        width: 5%;
         background-color: $orange;
       }
     }
   }
+}
+
+.base-nav {
+  transform: translateX(0);
+  transition: 1s ease-in-out;
+}
+.move-nav {
+  transform: translateX(-79.5vw);
+  transition: 1s ease-in-out;
 }
