@@ -1,16 +1,16 @@
 @import "_variables";
 
-.retail_wrapper {
+.community_wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 282px;
+  margin-left: 376px;
   transform: translateX(79.5vw);
   transition: ease-in-out 1s;
-  background-color: $red;
-  width: 100%;
+  background-color: $orange;
   height: 4530px;
-  .retail {
+  width: 100%;
+  .community {
     padding: 50px;
     width: 85%;
   }
